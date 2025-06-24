@@ -1,0 +1,78 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding-right: 50px;
+}
+
+.logo{
+    height: 80px;
+    width: 110px;
+}
+
+.nav-items ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    padding: 10px;
+    font-size: large;
+}
+
+
+.filter{
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 5px;
+    width: 200px;
+    text-align: center;
+    height: 350px;  
+    background: rgb(37, 193, 221);
+    text-decoration: none;
+}
+
+.card:hover{
+    border: 1px solid black;
+}
+
+.card-photo{
+    width: 190px;
+    height: 150px;
+    padding-top: 2px;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card{
+    width: 200px;
+    height: 350px;
+    margin: 20px;
+    background: rgb(37, 193, 221);
+}
+
+.login{
+    margin: 2px;
+    background: yellow;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+}
+.user-card{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
