@@ -1,9 +1,10 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect,useState, useContext } from 'react'
 import Shimmer from './Shimmer';
 import {MENU_API} from "../utils/constants"
 import { useParams } from 'react-router-dom';
 import useRestaurantMenu from '../utils/useRestaurantMenu';
 import RestaurantCategory from './RestaurantCategory';
+import UserContext from '../utils/UserContext';
 
 const RestaurantMenu = () => {
     
@@ -27,9 +28,9 @@ const RestaurantMenu = () => {
     // }
 
 
-    const [showIndex, setShowIndex] = useState(null);
+    // const [showIndex, setShowIndex] = useState(null);
 
-    
+    // const dummy = useContext(UserContext);
 
     if(resInfo === null) return <Shimmer/> ;
 

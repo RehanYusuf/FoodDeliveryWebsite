@@ -14,7 +14,7 @@ class About extends Component{
     return(
       <div>
         <User name = {"First"} location = {"Dehradun"} contact = {899151151}/>
-        <UserClass />
+        {/* <UserClass /> */}
       </div>
     )
    }

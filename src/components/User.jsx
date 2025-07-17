@@ -6,7 +6,6 @@ const User = (props) => {
     const clickit = () => {
       setCount(count+1);
     }
-
    
     useEffect(()=>{
       functioning()
@@ -15,10 +14,10 @@ const User = (props) => {
     const functioning = async () => {
       const data = await fetch('https://api.github.com/users/Sreenivasulu-Kalluru');
       const json = await data.json();
-      console.log(json);
+      // console.log(json);
   }
   return (
-    <div className>
+    <div>
         <h2>{count}</h2>
         <button onClick={clickit}>click</button>
         <h2>Name: {name}</h2>
