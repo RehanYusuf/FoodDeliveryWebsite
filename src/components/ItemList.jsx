@@ -32,16 +32,17 @@ const ItemList = ({items}) => {
 
                 {/* right */}
                 <div className="w-3/12">
-                    <div className="absolute mx-14 ">
-                        <button className="text-white bg-black rounded-lg p-2 hover:text-black hover:bg-white transition-all" onClick={() => handleAddItem(item)}>
+
+                    <div className="absolute mx-0 ">
+                        <button className="text-white bg-black opacity-85 rounded-lg p-2 hover:text-black hover:bg-white transition-all" onClick={() => handleAddItem(item)}>
                             Add+
-                        </button>
-                        
+                        </button>   
                     </div>
+
                     <img src={CDN_URL + item?.card?.info?.imageId} className="w-full font-bold"/>
 
-                    <div className="absolute my-[-40px] mx-14">
-                         <button className="text-white bg-black rounded-lg p-2 hover:text-black hover:bg-white transition-all" onClick={removeIt}>
+                    <div className="absolute my-[-40px] mx-0">
+                         <button className="text-white bg-black opacity-85 rounded-lg p-2 hover:text-black hover:bg-white transition-all" onClick={removeIt}>
                             Remove
                         </button>
                     </div>
