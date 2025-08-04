@@ -21,12 +21,12 @@ const Header = () => {
     return(
         <div className='flex justify-between bg-green-200 items-center'>
 
-            <div className="logo-container">
-                <img className= 'h-[100px] w-[140px]' src={IMAGE_URL}/>
+            <div className="pl-5">
+                <img className= 'h-12 w-12' src={IMAGE_URL}/>
             </div>
 
             <div className="nav-items">
-                <ul className='flex p-4 m-4 gap-4'>
+                <ul className='flex p-4 m-4 gap-4 items-center'>
                     <li>Online Status:{onlineStatus ? "✅" : "🔴"}</li>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About-Us</Link></li>
@@ -34,7 +34,7 @@ const Header = () => {
                     <li><Link>Help</Link></li>
                     <li className='font-bold text-lg'><Link to="/cart">Cart ({cartItems.length} items)</Link></li>
                     <li><Link to="/grocery">Grocery</Link></li>
-                    <button className="login" onClick={clicking}>{btn}</button>
+                    <button className="bg-yellow-500 p-2 m-2 rounded-lg" onClick={clicking}>{btn}</button>
                 </ul>
             </div>
 

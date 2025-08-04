@@ -55,43 +55,53 @@ const Body = () => {
     }
 
    
-    return(
+    return (
       <div className="body">
-
         <div className="filter flex">
 
-           <div className='m-4 p-3'>
-
-               <input type="text" className="border border-solid border-black" value={searchText} onChange={(e)=>{
-                   setSearchText(e.target.value);
-               }}/>
-
-               <button className="px-2 m-4 bg-green-400 hover:bg-green-300 hover:text-white" onClick={searchFunction}>Click</button>
-               
-               <button onClick={clickFunction} className="bg-yellow-400 px-2 hover:bg-yellow-300 hover:text-white ">
-               press Me</button> 
-               
-           </div>
-
-        </div>
-
-        <div className="cards-container px-4 flex flex-wrap"> 
+          <div className="m-4 p-3">
             
-           {newFilter.map( (restaurant)=> 
 
-           <Link key = {restaurant.id} to = {"/restaurants/"+ restaurant.id}> 
+              <input
+                type="text"
+                className="border border-solid border-black h-8"
+                value={searchText}
+                onChange={(e) => {
+                  setSearchText(e.target.value);
+                }}
+              />
 
-           {
-           restaurant.isOpen ? (<CardisOpen resData = {restaurant}/>) : (<Card  resData = {restaurant}/>)
-           }
-           
+              <button
+                className="p-2 m-4 bg-green-400 hover:bg-green-300 hover:text-white rounded-lg"
+                onClick={searchFunction}
+              >
+                Click
+              </button>
 
-            </Link>
-           )}
+            
+
+            <button
+              onClick={clickFunction}
+              className="bg-yellow-400 p-2 hover:bg-yellow-300 rounded-lg hover:text-white "
+            >
+              4.5 Star
+            </button>
+          </div>
         </div>
 
-   </div>  
-    )
+        <div className="cards-container px-4 flex flex-wrap">
+          {newFilter.map((restaurant) => (
+            <Link key={restaurant.id} to={"/restaurants/" + restaurant.id}>
+              {restaurant.isOpen ? (
+                <CardisOpen resData={restaurant} />
+              ) : (
+                <Card resData={restaurant} />
+              )}
+            </Link>
+          ))}
+        </div>
+      </div>
+    );
 }
 
 export default Body
